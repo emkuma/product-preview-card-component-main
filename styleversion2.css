@@ -22,7 +22,6 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    margin: 150px auto;
     width: 378px;
     height: auto;
     background-color: var(--body-bg-color);
@@ -86,7 +85,7 @@ main {
     line-height: 1.7;
 }
 
-.pricing__info {         
+.pricing__info {        
     position: relative;
 }
 
@@ -103,8 +102,7 @@ main {
     color: var(--product-text-color);
     text-decoration: line-through;
     height: 20px;
-    margin-top: 8px;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 button {
@@ -203,10 +201,9 @@ svg {
         height: auto;
     }
 
-    .product__pricing--modifier {
-        margin-left: 15px;
-        margin-top: 11px;
-    }
+    /* .product__pricing--modifier { */
+        /* margin-left: 0; */
+    /* } */
 
     button, a, svg {
         background-color: var(--price-button-color);
