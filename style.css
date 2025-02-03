@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: white;
+}
+
+:root {
+    --body-bg-color: hsl(28, 41%, 92%);
+    --product-bg-color: hsl(0, 0%, 100%);
+    --product-text-color: hsl(252, 6%, 60%);
+    --product-title-color: hsl(224, 15%, 13%);
+    --price-color: hsl(158, 37%, 37%);
+    --price-button-color: hsl(158, 37%, 37%);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+ 
+body {
+    display: flex;
+    flex-direction: column;
+    width: 378px;
+    height: auto;
+    background-color: var(--body-bg-color);
+}
+
+main, .product__image {
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+}
+
+main, .product__content {
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+
+main {
+    margin: 23px 15px 20px;
+}
+
+.product__ad {
+    background-color: transparent;
+}
+
+.product__image {
+    object-fit: cover;
+    max-width: 349px;
+    aspect-ratio: 330 / 228;
+}
+
+.product__content {
+    height: 330px;
+    background-color: var(--product-bg-color);
+}
+
+.product__content > * {
+    margin-left: 22px;
+}
+
+.product__topic {
+    font-family: "Fraunces", sans-serif;
+    font-size: 11px;
+    color: var(--product-text-color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.product__title {
+    width: 84%;
+    color: var(--product-title-color);
+    letter-spacing: 1.25px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.product__main {
+    width: 88%;
+    font-family: "Fraunces", sans-serif;
+    color: var(--product-text-color);
+    letter-spacing: 1.2px;
+    line-height: 1.7;
+}
+
+.pricing__info {         
+    position: relative;
+}
+
+.product__pricing {
+    display: inline-block;
+    margin-top: 0;
+    color: var(--price-color);
+}
+
+.product__pricing--modifier {
+    position: absolute;         /* Position the crossed out price. */
+    display: inline-block;
+    font-family: "Fraunces", sans-serif;
+    color: var(--product-text-color);
+    text-decoration: line-through;
+    height: 20px;
+    margin-top: 12px;
+}
+
+button {
+    position: relative;
+    width: 88%;
+    background-color: var(--price-button-color);
+    margin-left: 20px;
+    margin-bottom: 30px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    letter-spacing: 1.2px;
+}
+
+a {
+    background-color: var(--price-button-color);
+    color: white;
+}
+
+svg {
+    position: absolute;
+    margin-left: -24px;
+    background-color: var(--price-button-color);
+}
+
+/* Media Queries */
+
+@media (min-width: 1024px) {
+
+    * {
+        background-color: var(--body-bg-color);
+    }
+
+    body {
+        width: 100%;
+        max-width: 630px;
+        height: auto;
+        margin: 130px auto;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        border-top-left-radius: 3%;
+        border-bottom-left-radius: 3%;
+        border-top-right-radius: 3%;
+        border-bottom-right-radius: 3%;
+        height: 450px;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .product__ad,
+    .product__content,
+    .product__pricing,
+    .product__pricing--modifier {
+        background-color: transparent;
+    }
+
+    .product__image {
+        object-fit: cover;
+        max-width: 300px;
+        aspect-ratio: 300 / 450;
+        border-top-right-radius: 0; 
+        border-bottom-left-radius: 3%;
+    }
+
+    .product__content {
+        width: 100%;
+    }
+
+    .product__content > * {
+        margin-top: 25px;
+        margin-left: 28px;
+        background-color: transparent;
+    }
+
+    .product__topic {
+        margin-top: 35px;
+        letter-spacing: 5px;
+        font-size: 12px;
+    }
+
+    .product__title {
+        width: 75%;
+        font-size: 2.4rem;
+    }
+
+    .product__main {
+        font-size: 15px;
+    }
+
+    .product__pricing {
+        font-size: 2.4rem;
+        height: auto;
+    }
+
+    .product__pricing--modifier {
+        margin-left: 25px;
+    }
+
+    button, a, svg {
+        background-color: var(--price-button-color);
+    }
+
+    a {
+        display: block;
+        position: relative;
+        width: 95%;
+        background-color: var(--price-button-color);
+        margin-left: -10px;
+        margin-top: -40px;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        letter-spacing: 1.2px;
+    }
+}    
