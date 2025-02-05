@@ -208,7 +208,7 @@ svg {
         margin-top: 11px;
     }
 
-    button, a, svg {
+    a, svg {
         background-color: var(--price-button-color);
     }
 
